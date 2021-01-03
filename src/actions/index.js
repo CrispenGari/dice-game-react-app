@@ -10,12 +10,6 @@ const restoreScore = () => {
     type: constants.RESTORE_SCORE,
   };
 };
-const updateScore = (value) => {
-  return {
-    value: value,
-    type: constants.RESTORE_SCORE,
-  };
-};
 const setHighScore = (value) => {
   return {
     type: constants.HIGH_SCORE,
@@ -40,7 +34,6 @@ const actions = {
   restoreScore,
   setLastScore,
   setHighScore,
-  updateScore,
 };
 
 export default actions;

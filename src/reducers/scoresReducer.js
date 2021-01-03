@@ -1,5 +1,5 @@
 import constants from "../utils";
-const scoresReducer = (state = 0, action) => {
+const scoresReducer = (state = [], action) => {
   switch (action.type) {
     case constants.SET_SCORE:
       return [...state, action.value];

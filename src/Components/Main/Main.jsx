@@ -13,7 +13,7 @@ const Main = () => {
   const score = useSelector((state) => state.scores);
 
   const dispatch = useDispatch();
-  dispatch(actions.updateScore(4));
+
   const flip = () => {
     setAnimation(true);
     setDiced(!false);
@@ -21,26 +21,29 @@ const Main = () => {
     setTimeout(() => {
       setAnimation(false);
       if (diced) {
-        // dispatch(actions.setScore(number));
         if (number === 6) {
           setBonus(true);
           setBonusPoints(10);
+          dispatch(actions.setScore(number + 10));
           setTimeout(() => {
             setBonus(false);
           }, 1500);
         } else if (number === 5) {
           setBonus(true);
           setBonusPoints(5);
+          dispatch(actions.setScore(number + 5));
           setTimeout(() => {
             setBonus(false);
           }, 1500);
         } else if (number === 4) {
           setBonus(true);
           setBonusPoints(2);
+          dispatch(actions.setScore(number + 2));
           setTimeout(() => {
             setBonus(false);
           }, 1500);
         } else {
+          dispatch(actions.setScore(number + 0));
         }
       }
     }, 1500);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Score.css";
 import { useSelector, useDispatch } from "react-redux";
 import actions from "../../actions";
@@ -20,19 +20,25 @@ const Score = () => {
     dispatch(actions.restoreScore());
   };
   lastScore > highScore && dispatch(actions.setHighScore(lastScore));
-  if (score.length) {
-    if (
-      score?.reduce((a, b) => {
-        return a + b;
-      }) > highScore
-    ) {
-      setNewScore(true);
+  useEffect(() => {
+    if (score.length) {
+      if (
+        score?.reduce((a, b) => {
+          return a + b;
+        }) > highScore
+      ) {
+        setNewScore(true);
 
-      setTimeout(() => {
-        setNewScore(false);
-      }, 2000);
+        const outId = setTimeout(() => {
+          setNewScore(false);
+        }, 2000);
+        return () => {
+          clearTimeout(outId);
+        };
+      }
     }
-  }
+  }, [score, setNewScore, highScore]);
+
   return (
     <div className="score">
       {newScore && (

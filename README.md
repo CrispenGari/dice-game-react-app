@@ -107,7 +107,7 @@ URL: [test application](http://localhost:3000)
 
 ## For the hosted version of this application you don't need to install anything just click the following URL
 
-URL: [test application online]()
+URL: [test application online](https://dice-game-react.web.app)
 
 ## Why this simple application?
 

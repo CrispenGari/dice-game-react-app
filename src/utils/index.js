@@ -4,7 +4,6 @@ const constants = {
   RESTORE_SCORE: "RESTORE_SCORE",
   HIGH_SCORE: "HIGH_SCORE",
   LAST_SCORE: "LAST_SCORE",
-  UPDATE_SCORE: "UPDATE_SCORE",
   THEMES: ["DARK", "LIGHT"],
 };
 export default constants;
