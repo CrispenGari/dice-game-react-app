@@ -1,3 +1,118 @@
+# What is this?
+
+This is a simple react app, that flips a die and return the scores for a certain player.
+
+### This application is using
+
+- React.js
+- React-Redux
+- Redux
+- Material-ui
+  - icons
+  - lab
+  - core
+
+### Installation of `redux` and `react-redux` via `npm`:
+
+```
+$npm i react-redux redux
+```
+
+### Installation of `redux` and `react-redux` via `yarn`:
+
+```
+$yarn add react-redux
+$yarn add redux
+```
+
+### Installation of `material-ui` `icons` `lab` `core` via `npm`:
+
+```
+$npm i @material-ui/icons @material-ui/lab @material-ui/core
+```
+
+### Installation of `material-ui` `icons` `lab` `core` via `yarn`:
+
+```
+$yarn add @material-ui/icons @material-ui/lab @material-ui/core
+```
+
+### Clone this repository using the following command:
+
+`$ git clone [URL to this repository]`
+
+### Navigate to the project folder of this app by running the following command:
+
+`$ cd dice-game-react-app`
+
+### Install the dependencies by running the following command:
+
+`$ npm install`
+
+### Then:
+
+`$ npm start or npm run start`
+
+## Deploying an app on firebase.
+
+##### Firstly you need to install `firebase-tools` globally by running:
+
+`$ npm install -g firebase-tools`
+
+##### Then
+
+Create a firebase app in the [firebase console](https://accounts.google.com/signin/v2/identifier?passive=1209600&osid=1&continue=https%3A%2F%2Fconsole.firebase.google.com%2Fu%2F0%2F&followup=https%3A%2F%2Fconsole.firebase.google.com%2Fu%2F0%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin) and register the app for hosting.
+
+##### Then
+
+##### Authenticate with firebase by running the following command:
+
+`$ firebase login`
+
+The browser window will pop up authenticate and go back to the cmd
+
+##### Then
+
+##### Run the following command
+
+`firebase init`
+Follow the following procedures
+
+```
+1. ? Are you ready to proceed? (Y/n) y
+2. >(*) Hosting: Configure and deploy Firebase Hosting sites - navigate with the arrows and click space to select then hit enter
+3. > Use an existing project - hit enter
+4. Navigate to your project name that you used to register in the firebase console and hit enter
+5. ? What do you want to use as your public directory? build  - the default is public rename it to build like so.
+6. ? Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y
+7. The github part is optional
+```
+
+##### Then
+
+##### Run the following command before deploying the app this is very important
+
+`npm run build`
+
+##### Finally
+
+##### Run the following command
+
+`firebase deploy`
+Then you will be provided with a url visit that URL then all its done
+
+### The react development server will start listening on port 3000 click the following URL:
+
+URL: [test application](http://localhost:3000)
+
+## For the hosted version of this application you don't need to install anything just click the following URL
+
+URL: [test application online]()
+
+## Why this simple application?
+
+This application was created for development and practice purposes.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
